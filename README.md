@@ -45,6 +45,7 @@ This repository packages those JSON definitions alongside their configuration sn
 - [Repository Layout](#repository-layout)
 - [Contributing](#contributing)
 - [Community](#community)
+- [Maintainers](#maintainers)
 - [License](#license)
 
 ## Getting Started
@@ -165,6 +166,13 @@ Questions or ideas? Join the conversation with fellow BunkerWeb maintainers and 
 - Discord: [discord.gg/YEdMKqztMZ](https://discord.gg/YEdMKqztMZ)
 - GitHub Issues: Use the issue tracker to report bugs or request new templates.
 - Code of Conduct: Review our [community guidelines](CODE_OF_CONDUCT.md) before engaging.
+
+## Maintainers
+
+| Name           | GitHub                                             |
+| -------------- | -------------------------------------------------- |
+| Théophile Diot | [@TheophileDiot](https://github.com/TheophileDiot) |
+| Alexandre      | [@YouKyi](https://github.com/YouKyi)               |
 
 ## License
 
