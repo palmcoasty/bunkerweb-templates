@@ -1,0 +1,22 @@
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    ports:
+      - 7880:7880/tcp
+      - 7881:7881/tcp
+      - 50000-50200:50000-50200/udp
+    volumes:
+      - ./livekit.yaml:/livekit.yaml
+    command: --config /livekit.yaml --node-ip 97.104.14.20
+
+  jwt-service:
+    image: ghcr.io/element-hq/lk-jwt-service:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - LIVEKIT_JWT_BIND=:8080
+      - LIVEKIT_URL=ws://livekit:7880
+      - LIVEKIT_KEY=dresden
+      - LIVEKIT_SECRET=01bf84009829e6d6f943c9f6e651aa27aea1f715fad00bce42ce45639322f8f8
+      - LIVEKIT_FULL_ACCESS_HOMESERVERS=matrix.palmcoasty.com
+      - LIVEKIT_INSECURE_SKIP_VERIFY_TLS=false
