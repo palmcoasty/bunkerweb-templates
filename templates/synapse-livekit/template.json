@@ -10,7 +10,7 @@
     "USE_BUNKERNET": "no",
     "GZIP_PROXIED": "expired no-cache no-store private auth",
     "AUTO_LETS_ENCRYPT": "yes",
-    "EMAIL_LETS_ENCRYPT": "registration@palmcoasty.com",
+    "EMAIL_LETS_ENCRYPT": "registration@domain.com",
     "USE_LIMIT_REQ": "no",
     "USE_LIMIT_CONN": "no",
     "LIMIT_REQ_RATE": "10r/s",
