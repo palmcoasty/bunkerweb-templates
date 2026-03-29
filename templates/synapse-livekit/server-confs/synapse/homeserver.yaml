@@ -1,0 +1,54 @@
+server_name: "matrix.domain.com"
+pid_file: /data/homeserver.pid
+public_baseurl: https://matrix.domain.com
+listeners:
+  - port: 8008
+    resources:
+    - compress: false
+      names:
+      - client
+      - federation
+    tls: false
+    type: http
+    x_forwarded: true
+  - port: 8448
+    resources:
+    - compress: false
+      names:
+      - federation
+    tls: false
+    type: http
+    x_forwarded: true
+database:
+  name: sqlite3
+  args:
+    database: /data/homeserver.db
+log_config: "/data/matrix.domain.com.log.config"
+media_store_path: /data/media_store
+report_stats: false
+macaroon_secret_key: "vDa+A;yo5e=MJi:.KSLf_uC~qoihjs~Q_kIP^e2FG4LfmEQ=Ji"
+form_secret: "9Jausok,XimpyMl*qLotB+=@DSZR@6,Nyz=adkAyGU1PnD;-IT"
+signing_key_path: "/data/matrix.palmcoasty.com.signing.key"
+registration_shared_secret: "tester"
+enable_registration: true
+enable_registration_without_verification: true
+registration_requires_token: false
+user_directory:
+  enabled: true
+  search_all_users: true
+  prefer_local_users: true
+trusted_key_servers:
+  - server_name: "matrix.org"
+experimental_features:
+  msc3266_enabled: true
+  msc4222_enabled: true
+  msc4140_enabled: true
+max_event_delay_duration: 24h
+rc_message:
+  per_second: 0.5
+  burst_count: 30
+rc_delayed_event_mgmt:
+  per_second: 1
+  burst_count: 20
+openid_token_lifetime: 900
+# vim:ft=yaml
