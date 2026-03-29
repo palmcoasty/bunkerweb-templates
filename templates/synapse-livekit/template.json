@@ -1,0 +1,119 @@
+{
+  "id": "synapse-livekit",
+  "name": "Matrix BunkerWeb Configuration",
+  "settings": {
+    "IS_DRAFT": "no",
+    "SERVER_NAME": "matrix.palmcoasty.com",
+    "USE_BAD_BEHAVIOR": "no",
+    "BAD_BEHAVIOR_STATUS_CODES": "405",
+    "BAD_BEHAVIOR_THRESHOLD": "50",
+    "USE_BUNKERNET": "no",
+    "GZIP_PROXIED": "expired no-cache no-store private auth",
+    "AUTO_LETS_ENCRYPT": "yes",
+    "EMAIL_LETS_ENCRYPT": "registration@palmcoasty.com",
+    "USE_LIMIT_REQ": "no",
+    "USE_LIMIT_CONN": "no",
+    "LIMIT_REQ_RATE": "10r/s",
+    "USE_METRICS": "no",
+    "ALLOWED_METHODS": "GET|POST|HEAD|PUT|DELETE|OPTIONS|PATCH",
+    "MAX_CLIENT_SIZE": "15m",
+    "HTTP2": "no",
+    "HTTP3": "no",
+    "USE_MODSECURITY": "no",
+    "USE_REAL_IP": "yes",
+    "USE_REVERSE_PROXY": "yes",
+    "REVERSE_PROXY_INTERCEPT_ERRORS": "no",
+    "REVERSE_PROXY_HOST_1": "http://server-ip:8008",
+    "REVERSE_PROXY_URL_1": "/_matrix/",
+    "REVERSE_PROXY_KEEPALIVE_1": "yes",
+    "REVERSE_PROXY_HIDE_HEADERS_1": "",
+    "REVERSE_PROXY_CONNECT_TIMEOUT_1": "30s",
+    "REVERSE_PROXY_HOST_2": "http://server-ip:8080/",
+    "REVERSE_PROXY_URL_2": "/livekit/jwt/",
+    "REVERSE_PROXY_KEEPALIVE_2": "yes",
+    "REVERSE_PROXY_CONNECT_TIMEOUT_2": "30s",
+    "REVERSE_PROXY_HOST_3": "http://server-ip:7880/",
+    "REVERSE_PROXY_URL_3": "/livekit/sfu/",
+    "REVERSE_PROXY_WS_3": "yes",
+    "REVERSE_PROXY_KEEPALIVE_3": "yes",
+    "REVERSE_PROXY_CONNECT_TIMEOUT_3": "30s",
+    "REVERSE_PROXY_READ_TIMEOUT_3": "120s",
+    "REVERSE_PROXY_SEND_TIMEOUT_3": "120s"
+  },
+  "configs": [],
+  "steps": [
+    {
+      "title": "SSL / Let's Encrypt",
+      "subtitle": "Configure ssl / let's encrypt settings.",
+      "settings": [
+        "AUTO_LETS_ENCRYPT",
+        "EMAIL_LETS_ENCRYPT"
+      ]
+    },
+    {
+      "title": "Reverse Proxy",
+      "subtitle": "Configure reverse proxy settings.",
+      "settings": [
+        "USE_REVERSE_PROXY",
+        "REVERSE_PROXY_INTERCEPT_ERRORS",
+        "REVERSE_PROXY_HOST_1",
+        "REVERSE_PROXY_URL_1",
+        "REVERSE_PROXY_KEEPALIVE_1",
+        "REVERSE_PROXY_HIDE_HEADERS_1",
+        "REVERSE_PROXY_CONNECT_TIMEOUT_1",
+        "REVERSE_PROXY_HOST_2",
+        "REVERSE_PROXY_URL_2",
+        "REVERSE_PROXY_KEEPALIVE_2",
+        "REVERSE_PROXY_CONNECT_TIMEOUT_2",
+        "REVERSE_PROXY_HOST_3",
+        "REVERSE_PROXY_URL_3",
+        "REVERSE_PROXY_WS_3",
+        "REVERSE_PROXY_KEEPALIVE_3",
+        "REVERSE_PROXY_CONNECT_TIMEOUT_3",
+        "REVERSE_PROXY_READ_TIMEOUT_3",
+        "REVERSE_PROXY_SEND_TIMEOUT_3"
+      ]
+    },
+    {
+      "title": "Rate Limiting",
+      "subtitle": "Configure rate limiting settings.",
+      "settings": [
+        "USE_LIMIT_REQ",
+        "USE_LIMIT_CONN",
+        "LIMIT_REQ_RATE"
+      ]
+    },
+    {
+      "title": "Security",
+      "subtitle": "Configure security settings.",
+      "settings": [
+        "USE_BAD_BEHAVIOR",
+        "BAD_BEHAVIOR_STATUS_CODES",
+        "BAD_BEHAVIOR_THRESHOLD",
+        "USE_BUNKERNET",
+        "USE_METRICS",
+        "USE_MODSECURITY",
+        "USE_REAL_IP"
+      ]
+    },
+    {
+      "title": "Performance",
+      "subtitle": "Configure performance settings.",
+      "settings": [
+        "GZIP_PROXIED",
+        "MAX_CLIENT_SIZE",
+        "HTTP2",
+        "HTTP3"
+      ]
+    },
+    {
+      "title": "Server / Core",
+      "subtitle": "Configure server / core settings.",
+      "settings": [
+        "IS_DRAFT",
+        "SERVER_NAME",
+        "ALLOWED_METHODS"
+      ]
+    }
+  ]
+}
