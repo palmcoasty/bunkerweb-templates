@@ -28,7 +28,7 @@ media_store_path: /data/media_store
 report_stats: false
 macaroon_secret_key: "vDa+A;yo5e=MJi:.KSLf_uC~qoihjs~Q_kIP^e2FG4LfmEQ=Ji"
 form_secret: "9Jausok,XimpyMl*qLotB+=@DSZR@6,Nyz=adkAyGU1PnD;-IT"
-signing_key_path: "/data/matrix.palmcoasty.com.signing.key"
+signing_key_path: "/data/matrix.domain.com.signing.key"
 registration_shared_secret: "tester"
 enable_registration: true
 enable_registration_without_verification: true
