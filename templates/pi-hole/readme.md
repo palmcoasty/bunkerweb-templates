@@ -1,6 +1,6 @@
 # Pi-hole on Root Domain with BunkerWeb
 
-It is possible to serve Pi-hole at the root of your domain, but this adds an extra attack surface and is **not advised**. Additionally, you will always be redirected to `/admin/` — this is how Pi-hole is built and cannot be changed.
+It is possible to serve Pi-hole at the root of your domain, but this adds an extra attack surface and is **not advised**. Additionally, you will always be redirected to `/admin/` — this is how Pi-hole is built and cannot be changed, by using bunkerweb you would need to modify pi-hole its self to achieve that.
 
 If you still want to proceed, use the raw config below instead of the template.json.
 
